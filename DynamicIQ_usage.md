@@ -1,26 +1,34 @@
-DynamicIQ - How to Use
-Choose one option below. The website is the easiest option.
-Option 1: Use the deployed website
-1. Open imperiumcbc.streamlit.app. No installation is needed.
-2. Follow Analyze and review below.
+DynamicIQ
+Quick Start Guide
+Review customer-support conversations, add remarks, and track completed reviews.
+🚀 Launch DynamicIQ
+For judges: use the deployed website. No installation or personal API key is needed when the deployment is configured by the project team.
+Use the website · Run locally · Review a conversation · Need help?
+Option 1: Use the website
+1. Click here to open DynamicIQ.
+2. Follow the Analyze and review steps below.
+Dataset to upload: DynamicIQ_shuffled.csv — provided with the project submission.
+
 Option 2: Run locally
-1. Open the project folder in VS Code. Open Terminal → New Terminal. Make sure the terminal is in the folder containing app.py.
-2. Install the required packages:
-   python -m pip install -r requirements.txt
-3. For AI mode, create or update .env in the same folder as app.py:
-   OPENAI_API_KEY=your_groq_api_key
-   OPENAI_MODEL=openai/gpt-oss-20b
-   Replace your_groq_api_key with your actual Groq API key. If already configured, skip this step.
-4. Start the application:
-   python -m streamlit run app.py
-5. Open the Local URL shown in the terminal, usually http://localhost:8501. Keep the terminal running.
-Analyze and review — both options
-1. Switch to AI mode: open the left sidebar using the arrow at the top-left. Under Workspace settings → Analysis settings → Analysis mode, select AI analysis. You can then collapse the sidebar.
-   - The deployed website uses its configured API key; reviewers do not need to enter one.
-   - Offline demo uses basic keyword rules and does not provide a full AI assessment.
-2. Upload the dataset: expand Dataset · upload or change, select Upload dataset, then upload DynamicIQ_shuffled.csv.
-3. Choose a conversation: click Convo 1, Convo 2, etc. in the right-side list.
-4. Analyze: click Analyze conversation and wait for the results. Read the transcript, findings and quoted evidence.
-5. Add remarks: enter Overall remarks, then tick I have reviewed this conversation and its available evidence.
-6. Save: click Save & Done. The conversation is marked Done, and the next unfinished conversation opens. Use Save draft if you want to finish reviewing later.
-7. Download results: expand Download saved review and select JSON report or Findings CSV. To download a completed call's report, select that Done conversation first.
+Before starting: install Python if needed. Open the project folder in VS Code, then select Terminal → New Terminal. Your terminal must be in the folder containing app.py.
+1. Install the required packages
+python -m pip install -r requirements.txt
+2. Configure AI mode
+Create a file named .env beside app.py. If already configured, skip this step.
+OPENAI_API_KEY=your_groq_api_key
+OPENAI_MODEL=openai/gpt-oss-20b
+Replace your_groq_api_key with your actual Groq API key. Keep this file private.
+3. Start the app
+python -m streamlit run app.py
+4. Open the local app
+If the terminal shows a different Local URL, open that URL instead. Keep the terminal running while using the app.
+Analyze and review
+These steps apply to both the website and the local app.
+Step	What to do
+1 · Select AI mode	Click the arrow at the top-left to open the sidebar. Expand Analysis settings under Workspace settings, then select AI analysis.
+2 · Upload the dataset	Expand Dataset · upload or change → choose Upload dataset → upload DynamicIQ_shuffled.csv.
+3 · Choose a conversation	Select Convo 1, Convo 2, etc. from the right-side list.
+4 · Analyze	Click Analyze conversation. Wait for the results, then read the transcript, findings and quoted evidence.
+5 · Add remarks	Enter Overall remarks. Tick I have reviewed this conversation and its available evidence.
+6 · Complete the review	Click Save & Done. The conversation shows Done, and the next unfinished conversation opens.
+7 · Download results	Select the reviewed conversation, expand Download saved review, then choose JSON report or Findings CSV.
